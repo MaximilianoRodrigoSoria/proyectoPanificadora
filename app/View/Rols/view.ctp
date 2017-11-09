@@ -16,12 +16,12 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit Rol'), array('action' => 'edit', $rol['Rol']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Rol'), array('action' => 'delete', $rol['Rol']['id']), array(), __('Are you sure you want to delete # %s?', $rol['Rol']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Rols'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Rol'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Usuarios'), array('controller' => 'usuarios', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Usuario'), array('controller' => 'usuarios', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Editar rol'), array('action' => 'edit', $rol['Rol']['id'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Borrar rol'), array('action' => 'delete', $rol['Rol']['id']), array(), __('Are you sure you want to delete # %s?', $rol['Rol']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de roles'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Rol Nuevo'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de usuarios'), array('controller' => 'usuarios', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo Usuario'), array('controller' => 'usuarios', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
 <div class="related">
@@ -65,7 +65,7 @@
 
 	<div class="actions">
 		<ul>
-			<li><?php echo $this->Html->link(__('New Usuario'), array('controller' => 'usuarios', 'action' => 'add')); ?> </li>
+			<li><?php echo $this->Html->link(__('Nuevo Usuario'), array('controller' => 'usuarios', 'action' => 'add')); ?> </li>
 		</ul>
 	</div>
 </div>

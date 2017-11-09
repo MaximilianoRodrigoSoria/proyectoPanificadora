@@ -1,3 +1,4 @@
+<?php //echo $this->Html->css(array('bootstrap-theme.min','bootstrap.min')); ?>  
 <div class="container">
 	<!--  -->
 	<br>
