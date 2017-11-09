@@ -13,15 +13,15 @@
 		echo $this->Form->input('legajo');
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end(__('Enviar')); ?>
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
 
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Usuario.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('Usuario.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Usuarios'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Rols'), array('controller' => 'rols', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Rol'), array('controller' => 'rols', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Borrar'), array('action' => 'delete', $this->Form->value('Usuario.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('Usuario.id'))); ?></li>
+		<li><?php echo $this->Html->link(__('Lista Usuarios'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('Lista Roles'), array('controller' => 'rols', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuev Rol'), array('controller' => 'rols', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

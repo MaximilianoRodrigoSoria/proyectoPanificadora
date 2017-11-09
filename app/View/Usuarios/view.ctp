@@ -54,13 +54,13 @@
 	</dl>
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+	<h3><?php echo __('Acciones'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit Usuario'), array('action' => 'edit', $usuario['Usuario']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Usuario'), array('action' => 'delete', $usuario['Usuario']['id']), array(), __('Are you sure you want to delete # %s?', $usuario['Usuario']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Usuarios'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Usuario'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Rols'), array('controller' => 'rols', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Rol'), array('controller' => 'rols', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Editar Usuario'), array('action' => 'edit', $usuario['Usuario']['id'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Borrar Usuario'), array('action' => 'delete', $usuario['Usuario']['id']), array(), __('Estas segur@ qye deseas borrar el usuario # %s?', $usuario['Usuario']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de usuarios'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Crear Usuario'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Lista de Roles'), array('controller' => 'rols', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Nuevo Rol'), array('controller' => 'rols', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
