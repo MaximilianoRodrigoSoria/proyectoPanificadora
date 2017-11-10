@@ -29,7 +29,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->meta('icon');
 		//echo $this->Html->css('cake.generic');
 	
-	echo $this->Html->css(array('cake.generic','estilos','footer'));
+	echo $this->Html->css(array('cake.generic','bootstrap','bootstrap-theme''estilos','footer'));
 	//	echo $this->Html->script(array('jquery.min','bootstrap.min'));
 
 		echo $this->fetch('meta');

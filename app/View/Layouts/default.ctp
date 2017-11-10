@@ -13,22 +13,20 @@
  * @since         CakePHP(tm) v 0.10.0.1076
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-
-$cakeDescription = __d('cake_dev', 'Panificadora: Sistema de gestion');
-$cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<?php echo $this->Html->charset(); ?>
+	
 	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $title_for_layout; ?>
+	Panificados del Sur - Inicio
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
 		//echo $this->Html->css(array('estilos','bootstrap-theme.min','bootstrap.min','footer', 'cake.generic'));
-		echo $this->Html->css('cake.generic');
+		echo $this->Html->css(array('estilos','cake.generic','bootstrap','font-awesome.min','bootstrap-theme','footer'));
+
+		echo $this->Html->script(array('jquery-2.2.4','bootstrap'));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -38,26 +36,54 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
-		</div>
-		<div id="content">
-
-			<?php echo $this->Session->flash(); ?>
-
-			<?php echo $this->fetch('content'); ?>
-		</div>
-		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
-				);
-			?>
-			<p>
-				<?php echo $cakeVersion; ?>
-			</p>
-		</div>
+			<nav class="navbar navbar-inverse">
+ 			<div class="container-fluid">
+    		<div class="navbar-header">
+      			<a class="navbar-brand" href="#">Panificados del Sur</a>
+    		</div>
+    		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      			<ul class="nav navbar-nav">
+        			<li class="active"><a href="index.html">Home</a></li>
+        			<li><a href="#">Usuarios</a></li>
+        				<li class="dropdown">
+          			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pedidos<span class="caret"></span></a>
+          			<ul class="dropdown-menu">
+            			<li><a href="#">Pedidos de Cliente</a></li>
+            			<li><a href="#">Pedidos de Producci&oacute;n</a></li>
+          			</ul></li>
+        			<li><a href="#">Productos</a></li>
+        			<li><a href="#">Insumos</a></li>
+        			<li><a href="#">F&oacute;rmulas</a></li>
+      				</ul>
+      			<ul class="nav navbar-nav navbar-right">
+        			<li><a href="#" type="button" data-toggle="modal" data-target="#salir">Salir</a></li>
+        		</ul>
+    		</div>
+			</div>
+		</nav>
 	</div>
+    			
+	<div id="content">
+
+		<?php echo $this->Session->flash(); ?>
+
+		<?php echo $this->fetch('content'); ?>
+	</div>
+
+	<div id="footer">
+
+		<nav class="navbar navbar-inverse">
+ 		<div class="container-fluid">
+ 			<div class="navbar-header">
+      			<p class="navbar-brand" >Panificados del Sur © 2017</p>
+    		</div>
+    		<div class="nav navbar-nav navbar-right" id="bs-example-navbar-collapse-1">
+      			<ul class="nav navbar-nav">
+      			<li><a>Webmasters: Maximiliano Rodrigo Soria - Esteban Joel Slobodianik</a></li>
+      			</ul>
+      		</div>
+ 		</div>
+ 		</nav>
 
 </body>
 </html>
