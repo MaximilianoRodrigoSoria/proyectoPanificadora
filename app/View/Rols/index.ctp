@@ -1,11 +1,17 @@
-<div class="rols index">
-	<h2><?php echo __('Rols'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
+<div class="container">
+	<input type="text" class="form-control" placeholder="Buscar"><br>
+	<div class="panel panel-default">
+
+  <div class="panel-heading">
+    <h3 class="panel-title">Roles</h3>
+  </div>
+ 	
+	<table class="table table-bordered">
 	<thead>
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th class="actions"><?php echo __('Acciones'); ?></th>
 	</tr>
 	</thead>
 	<tbody>
@@ -22,6 +28,8 @@
 <?php endforeach; ?>
 	</tbody>
 	</table>
+</div>
+
 	<p>
 	<?php
 	echo $this->Paginator->counter(array(
@@ -36,11 +44,4 @@
 	?>
 	</div>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Nuevo Rol'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('Lista de usuarios'), array('controller' => 'usuarios', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nuevo usuario'), array('controller' => 'usuarios', 'action' => 'add')); ?> </li>
-	</ul>
 </div>
