@@ -10,8 +10,9 @@
 	?>
 	</fieldset>
 	<br>
-<?php echo $this->Form->end(__('Enviar'),array('class'=>'btn btn-default')); ?>
+<?php   echo $this->Form->submit('Enviar',array('class' => 'btn btn-default', 'div' => false)); ?>	
 </div>
+
 
 
 </div>

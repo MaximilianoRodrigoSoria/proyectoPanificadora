@@ -24,7 +24,11 @@
 
 			<?php echo $this->Html->link('',array('controller'=>'rols','action'=>'view', $rol['Rol']['id']), array('class'=>'btn btn-default glyphicon glyphicon-search')); ?>
 			<?php echo $this->Html->link(__(''), array('action' => 'edit', $rol['Rol']['id']), array('class'=>'btn btn-default glyphicon glyphicon-pencil')); ?>
-			<?php echo $this->Form->postLink(__('Borrar'), array('action' => 'delete', $rol['Rol']['id']), array(), __('Estas seguro que deseas borrar el registro # %s?', $rol['Rol']['id'])); ?>
+	
+			<?php echo $this->Form->postLink(  $this->Html->tag('i', '', array('class' => 'btn btn-default glyphicon glyphicon-trash')). " ",
+        array('action' => 'delete', $rol['Rol']['id']), array('escape'=>false),__('Estas seguro que quieres borrar el registro # %s?', $rol['Rol']['id']),
+   array('class' => 'btn btn-mini')
+); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -47,4 +51,5 @@
 	</div> <br>
 </div>
 </div>
+
 
