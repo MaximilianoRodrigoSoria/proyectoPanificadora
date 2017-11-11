@@ -34,8 +34,10 @@
 	?>
 </head>
 <body>
+   
 		<div id="header">
-			<nav class="navbar navbar-inverse navbar-fixed-top">
+       
+			<nav class="navbar navbar-inverse" class="img-responsive">
  			<div class="container-fluid">
     	<div class="navbar-header">
           <a class="navbar-brand" href="#">Panificados del Sur</a>
@@ -76,21 +78,11 @@
 
 		<?php echo $this->fetch('content'); ?>
 	</div>
-
+  <?php   echo $this->element('footer');?>
 	<div id="footer">
 
-		<nav class="navbar navbar-inverse navbar-fixed-bottom">
- 		<div class="container-fluid">
- 			<div class="navbar-header">
-      			<p class="navbar-brand" >Panificados del Sur © 2017</p>
-    		</div>
-    		<div class="nav navbar-nav navbar-right" id="bs-example-navbar-collapse-1">
-      			<ul class="nav navbar-nav">
-      			<li><a>Webmasters: Maximiliano Rodrigo Soria - Esteban Joel Slobodianik</a></li>
-      			</ul>
-      		</div>
- 		</div>
- 		</nav>
-  </div>
+		
+<?php   echo $this->element('footer');?>
+
 </body>
 </html>
