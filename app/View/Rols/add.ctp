@@ -1,19 +1,17 @@
-<div class="rols form">
-<?php echo $this->Form->create('Rol'); ?>
+<div class="container">
+
+<div class="form-group">
+	<?php echo $this->Form->create('Rol'); ?>
+	<?php   echo $this->element('navtabs-alta');?>
 	<fieldset>
-		<legend><?php echo __('Add Rol'); ?></legend>
+		
 	<?php
-		echo $this->Form->input('nombre');
+		echo $this->Form->input('nombre',array('class'=>'form-control', 'placeholder'=>'nuevo rol'));
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+	<br>
+<?php echo $this->Form->end(__('Submit'),array('class'=>'btn btn-default')); ?>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
 
-		<li><?php echo $this->Html->link(__('List Rols'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Usuarios'), array('controller' => 'usuarios', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Usuario'), array('controller' => 'usuarios', 'action' => 'add')); ?> </li>
-	</ul>
+
 </div>

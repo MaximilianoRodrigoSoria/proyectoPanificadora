@@ -1,4 +1,5 @@
 <div class="container">
+	<?php   echo $this->element('navtabs-consulta');?>
 	<input type="text" class="form-control" placeholder="Buscar"><br>
 	<div class="panel panel-default">
 
@@ -34,7 +35,7 @@
 	<p>
 	<?php
 	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+	'format' => __('Pagina {:page} de {:pages}, Total {:count} ')
 	));
 	?>	</p>
 	<div class="paging">
