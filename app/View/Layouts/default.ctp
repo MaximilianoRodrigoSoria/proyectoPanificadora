@@ -34,9 +34,8 @@
 	?>
 </head>
 <body>
-	<div id="container">
 		<div id="header">
-			<nav class="navbar navbar-inverse">
+			<nav class="navbar navbar-inverse navbar-fixed-top">
  			<div class="container-fluid">
     	<div class="navbar-header">
           <a class="navbar-brand" href="#">Panificados del Sur</a>
@@ -48,9 +47,7 @@
           </button>
       </div>
 
-    
-    	
-    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       			<ul class="nav navbar-nav">
         			<li class="active"><a href="index.html">Home</a></li>
         			<li><a href="#">Usuarios</a></li>
@@ -71,7 +68,8 @@
 			</div>
 		</nav>
 	</div>
-    			
+  
+  <div id="container">  			
 	<div id="content">
 
 		<?php echo $this->Session->flash(); ?>
@@ -81,7 +79,7 @@
 
 	<div id="footer">
 
-		<nav class="navbar navbar-inverse">
+		<nav class="navbar navbar-inverse navbar-fixed-bottom">
  		<div class="container-fluid">
  			<div class="navbar-header">
       			<p class="navbar-brand" >Panificados del Sur © 2017</p>
@@ -93,6 +91,6 @@
       		</div>
  		</div>
  		</nav>
-
+  </div>
 </body>
 </html>
