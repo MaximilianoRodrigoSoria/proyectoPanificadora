@@ -1,59 +1,41 @@
-<?php //echo $this->Html->css(array('bootstrap-theme.min','bootstrap.min')); ?>  
+<br>
 <div class="container">
-	<!--  -->
-	<br>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Panificadora la ideal</a>
-    </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li> <li><?php   echo $this->Html->link('Home',array('controller'=>'','action'=>'index'));?></li></li>
-        <li><a href="#">Pedidos</a></li>
-        <li class="dropdown active">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ABMs <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><?php   echo $this->Html->link('Empleados',array('controller'=>'meseros','action'=>'index'));?></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Enviar</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Ayuda</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+<div id="header">
+       
+			<nav class="navbar navbar-inverse" class="img-responsive">
+ 			<div class="container-fluid">
+    	<div class="navbar-header">
+          <a class="navbar-brand" href="#">Panificados del Sur</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+      </div>
+
+     	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      			<ul class="nav navbar-nav">
+        			<li class="active"><?php   echo $this->Html->link('Home',array('controller'=>'','action'=>'index'));?></li>
+        			<li><?php   echo $this->Html->link('Usuarios',array('controller'=>'Usuarios','action'=>'index'));?></li>
+                <li><?php   echo $this->Html->link('Clientes',array('controller'=>'Clientes','action'=>'index'));?></li>
+        				<li class="dropdown">
+          			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pedidos<span class="caret"></span></a>
+          			<ul class="dropdown-menu">
+            			<li><a href="#">Pedidos de Cliente</a></li>
+            			<li><a href="#">Pedidos de Producci&oacute;n</a></li>
+          			</ul></li>
+        			<li><a href="#">Productos</a></li>
+        			<li><a href="#">Insumos</a></li>
+        			<li><a href="#">F&oacute;rmulas</a></li>
+      				</ul>
+      			<ul class="nav navbar-nav navbar-right">
+        			<li><a href="#" type="button" data-toggle="modal" data-target="#salir">Salir</a></li>
+        		</ul>
+    		</div>
+			</div>
+		</nav>
+	</div>
 
 </div>
