@@ -20,9 +20,10 @@
 		<td><?php echo h($rol['Rol']['id']); ?>&nbsp;</td>
 		<td><?php echo h($rol['Rol']['nombre']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $rol['Rol']['id'])); ?>
-			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $rol['Rol']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Borrar'), array('action' => 'delete', $rol['Rol']['id']), array(), __('Are you sure you want to delete # %s?', $rol['Rol']['id'])); ?>
+
+			<?php echo $this->Html->link('',array('controller'=>'rols','action'=>'view', $rol['Rol']['id']), array('class'=>'btn btn-default glyphicon glyphicon-search')); ?>
+			<?php echo $this->Html->link(__(''), array('action' => 'edit', $rol['Rol']['id']), array('class'=>'btn btn-default glyphicon glyphicon-pencil')); ?>
+			<?php echo $this->Form->postLink(__('Borrar'), array('action' => 'delete', $rol['Rol']['id']), array(), __('Estas seguro que deseas borrar el registro # %s?', $rol['Rol']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -38,10 +39,11 @@
 	?>	</p>
 	<div class="paging">
 	<?php
-		echo $this->Paginator->prev('< ' . __('Anterior'), array(), null, array('class' => 'prev disabled'));
+		echo $this->Paginator->prev('< ' . __('Anterior'), array(), null, array('class' => 'prev disabled btn btn-default'));
 		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('Siguiente') . ' >', array(), null, array('class' => 'next disabled'));
+		echo $this->Paginator->next(__('Siguiente') . ' >', array(), null, array('class' => 'next disabled btn btn-default'));
 	?>
-	</div>
+	</div> <br>
 </div>
 </div>
+
