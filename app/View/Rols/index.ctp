@@ -1,11 +1,18 @@
-<div class="rols index">
-	<h2><?php echo __('Rols'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
+<div class="container">
+	<?php   echo $this->element('navtabs-rol-consulta');?>
+	<input type="text" class="form-control" placeholder="Buscar"><br>
+	<div class="panel panel-default">
+
+  <div class="panel-heading">
+    <h3 class="panel-title">Roles</h3>
+  </div>
+ 	
+	<table class="table table-bordered">
 	<thead>
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('nombre'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th class="actions"><?php echo __('Acciones'); ?></th>
 	</tr>
 	</thead>
 	<tbody>
@@ -14,33 +21,35 @@
 		<td><?php echo h($rol['Rol']['id']); ?>&nbsp;</td>
 		<td><?php echo h($rol['Rol']['nombre']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('Ver'), array('action' => 'view', $rol['Rol']['id'])); ?>
-			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $rol['Rol']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Borrar'), array('action' => 'delete', $rol['Rol']['id']), array(), __('Are you sure you want to delete # %s?', $rol['Rol']['id'])); ?>
+
+			<?php echo $this->Html->link('',array('controller'=>'rols','action'=>'view', $rol['Rol']['id']), array('class'=>'btn btn-default glyphicon glyphicon-search')); ?>
+			<?php echo $this->Html->link(__(''), array('action' => 'edit', $rol['Rol']['id']), array('class'=>'btn btn-default glyphicon glyphicon-pencil')); ?>
+	
+			<?php echo $this->Form->postLink(  $this->Html->tag('i', '', array('class' => 'btn btn-default glyphicon glyphicon-trash')). " ",
+        array('action' => 'delete', $rol['Rol']['id']), array('escape'=>false),__('Estas seguro que quieres borrar el registro # %s?', $rol['Rol']['id']),
+   array('class' => 'btn btn-mini')
+); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
 	</tbody>
 	</table>
+</div>
+
 	<p>
 	<?php
 	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+	'format' => __('Pagina {:page} de {:pages}, Total {:count} ')
 	));
 	?>	</p>
 	<div class="paging">
 	<?php
-		echo $this->Paginator->prev('< ' . __('Anterior'), array(), null, array('class' => 'prev disabled'));
+		echo $this->Paginator->prev('< ' . __('Anterior'), array(), null, array('class' => 'prev disabled btn btn-default'));
 		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('Siguiente') . ' >', array(), null, array('class' => 'next disabled'));
+		echo $this->Paginator->next(__('Siguiente') . ' >', array(), null, array('class' => 'next disabled btn btn-default'));
 	?>
-	</div>
+	</div> <br>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Nuevo Rol'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('Lista de usuarios'), array('controller' => 'usuarios', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nuevo usuario'), array('controller' => 'usuarios', 'action' => 'add')); ?> </li>
-	</ul>
 </div>
+
+

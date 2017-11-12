@@ -62,10 +62,6 @@
 	<?php endforeach; ?>
 	</table>
 <?php endif; ?>
-
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('Nuevo Usuario'), array('controller' => 'usuarios', 'action' => 'add')); ?> </li>
-		</ul>
+	<?php echo $this->Html->link(__('Nuevo Usuario'), array('controller' => 'usuarios', 'action' => 'add'), array('type'=>'button','class'=>'btn btn-default')); ?>
 	</div>
 </div>

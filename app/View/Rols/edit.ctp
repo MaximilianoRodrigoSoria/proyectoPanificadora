@@ -1,21 +1,22 @@
-<div class="rols form">
-<?php echo $this->Form->create('Rol'); ?>
+<div class="container">
+
+<div class="form-group">
+	<?php echo $this->Form->create('Rol'); ?>
+	<?php   echo $this->element('navtabs-rol-editar');?>
 	<fieldset>
-		<legend><?php echo __('Edit Rol'); ?></legend>
+		
 	<?php
 		echo $this->Form->input('id');
-		echo $this->Form->input('nombre');
+		echo $this->Form->input('nombre',array('class'=>'form-control', 'placeholder'=>'nuevo rol'));
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
+	<br>
 
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Rol.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('Rol.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Rols'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Usuarios'), array('controller' => 'usuarios', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Usuario'), array('controller' => 'usuarios', 'action' => 'add')); ?> </li>
-	</ul>
+</div>
+
+<?php
+   echo $this->Form->submit('Enviar',array(
+                              'class' => 'btn btn-default',
+                              'div' => false));
+?>
 </div>

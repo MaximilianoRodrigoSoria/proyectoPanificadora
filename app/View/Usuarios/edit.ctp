@@ -1,27 +1,26 @@
+<div class="container">
+<?php   echo $this->element('navtabs-usuario-editar');?>
 <div class="usuarios form">
-<?php echo $this->Form->create('Usuario'); ?>
-	<fieldset>
-		<legend><?php echo __('Edit Usuario'); ?></legend>
-	<?php
-		echo $this->Form->input('id');
-		echo $this->Form->input('rol_id');
-		echo $this->Form->input('nombre');
-		echo $this->Form->input('apellido');
-		echo $this->Form->input('dni');
-		echo $this->Form->input('telefono');
-		echo $this->Form->input('email');
-		echo $this->Form->input('legajo');
-	?>
-	</fieldset>
-<?php echo $this->Form->end(__('Enviar')); ?>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
+	<?php echo $this->Form->create('Usuario'); ?>
 
-		<li><?php echo $this->Form->postLink(__('Borrar'), array('action' => 'delete', $this->Form->value('Usuario.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('Usuario.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('Lista Usuarios'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('Lista Roles'), array('controller' => 'rols', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('Nuev Rol'), array('controller' => 'rols', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
+	<form class="form-horizontal">
+		<fieldset>
+			<legend><?php echo __('Modificar Usuario'); ?></legend>
+		<?php
+			echo $this->Form->input('id',array('class'=>'form-control'));
+			echo $this->Form->input('rol_id',array('class'=>'form-control'));
+			echo $this->Form->input('nombre',array('class'=>'form-control'));
+			echo $this->Form->input('apellido',array('class'=>'form-control'));
+			echo $this->Form->input('dni',array('class'=>'form-control'));
+			echo $this->Form->input('telefono',array('class'=>'form-control'));
+			echo $this->Form->input('email',array('class'=>'form-control'));
+			echo $this->Form->input('legajo',array('class'=>'form-control'));
+		?>
+	</fieldset>
+
+	<?php
+   	echo $this->Form->submit('Enviar',array('class' => 'btn btn-default', 'div' => false)); ?>
+
+	</form>
+</div></div>
+
