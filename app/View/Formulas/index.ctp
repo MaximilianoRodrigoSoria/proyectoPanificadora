@@ -13,7 +13,11 @@
 	<thead>
 
 	<tr>
+<<<<<<< HEAD
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
+=======
+			<th><?php echo $this->Paginator->sort('id_formula'); ?></th>
+>>>>>>> origin/master
 			<th><?php echo $this->Paginator->sort('descripcion'); ?></th>
 			<th class="actions"><?php echo __('Acciones'); ?></th>
 	</tr>
@@ -21,6 +25,7 @@
 	<tbody>
 	<?php foreach ($formula as $formulas): ?>
 	<tr>
+<<<<<<< HEAD
 		<td><?php echo h($formulas['Formula']['id']); ?>&nbsp;</td>
 		<td><?php echo h($formulas['Formula']['descripcion']); ?>&nbsp;</td>
 		<td class="actions">
@@ -30,6 +35,17 @@
 	
 			<?php echo $this->Form->postLink(  $this->Html->tag('i', '', array('class' => 'btn btn-default glyphicon glyphicon-trash')). " ",
         array('action' => 'delete', $formulas['Formula']['id']), array('escape'=>false),__('Estas seguro que quieres borrar el registro n°%s?', $formulas['Formula']['id']),
+=======
+		<td><?php echo h($formulas['Formula']['id_formula']); ?>&nbsp;</td>
+		<td><?php echo h($formulas['Formula']['descripcion']); ?>&nbsp;</td>
+		<td class="actions">
+
+			<?php echo $this->Html->link('',array('controller'=>'formulas','action'=>'view', $formulas['Formula']['id_formula']), array('class'=>'btn btn-default glyphicon glyphicon-search')); ?>
+			<?php echo $this->Html->link(__(''), array('action' => 'edit', $formulas['Formula']['id_formula']), array('class'=>'btn btn-default glyphicon glyphicon-pencil')); ?>
+	
+			<?php echo $this->Form->postLink(  $this->Html->tag('i', '', array('class' => 'btn btn-default glyphicon glyphicon-trash')). " ",
+        array('action' => 'delete', $formulas['Formula']['id_formula']), array('escape'=>false),__('Estas seguro que quieres borrar el registro n°%s?', $formulas['Formula']['id_formula']),
+>>>>>>> origin/master
    array('class' => 'btn btn-mini')
 ); ?>
 		</td>

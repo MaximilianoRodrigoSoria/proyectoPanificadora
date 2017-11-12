@@ -7,7 +7,11 @@
 		<fieldset>
 			<legend><?php echo __('Modificar Formula'); ?></legend>
 		<?php
+<<<<<<< HEAD
 			echo $this->Form->input('id',array('class'=>'form-control'));
+=======
+			echo $this->Form->input('id_formula',array('class'=>'form-control'));
+>>>>>>> origin/master
 			echo $this->Form->input('descripcion',array('class'=>'form-control'));
 		?>
 	</fieldset>

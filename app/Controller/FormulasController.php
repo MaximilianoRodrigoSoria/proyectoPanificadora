@@ -47,7 +47,11 @@ class FormulasController extends AppController {
  */
 	public function add() {
 		if ($this->request->is('post')) {
+<<<<<<< HEAD
 			$this->Formula->create($datos=array());
+=======
+			$this->Formula->create();
+>>>>>>> origin/master
 			if ($this->Formula->save($this->request->data)) {
 				//$this->Session->setFlash(__('The Formula has been saved.'));
 				return $this->redirect(array('action' => 'index'));
@@ -90,8 +94,13 @@ class FormulasController extends AppController {
  * @param string $id
  * @return void
  */
+<<<<<<< HEAD
 	public function delete($id = null) {
 		$this->Formula->id = $id;
+=======
+	public function delete($id_formula = null) {
+		$this->Formula->id_formula = $id_formula;
+>>>>>>> origin/master
 		if (!$this->Formula->exists()) {
 			throw new NotFoundException(__('Invalid Formula'));
 		}

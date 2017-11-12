@@ -2,7 +2,11 @@
 <?php   echo $this->element('navtabs-usuario-alta');?>
 <div class="usuarios form">
 
+<<<<<<< HEAD
 	<form action="add" method="post" class="form-horizontal">
+=======
+	<form class="form-horizontal">
+>>>>>>> origin/master
 	<div class="form-group">
 		<?php echo $this->Form->create('Usuario'); ?>
 
@@ -18,7 +22,12 @@
 		echo $this->Form->input('legajo', array('class'=>'form-control'));
 	?>
 	</fieldset><br>
+<<<<<<< HEAD
 	<?php echo $this->Form->submit('Enviar',array('class' => 'btn btn-default', 'div' => false)); ?>
+=======
+	<?php
+   	echo $this->Form->submit('Enviar',array('class' => 'btn btn-default', 'div' => false)); ?>
+>>>>>>> origin/master
 </div>
 </form>
 </div> </div>

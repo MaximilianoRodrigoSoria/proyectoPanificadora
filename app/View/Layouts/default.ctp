@@ -26,7 +26,11 @@
 		//echo $this->Html->css(array('estilos','bootstrap-theme.min','bootstrap.min','footer', 'cake.generic'));
 		echo $this->Html->css(array('estilos','bootstrap','font-awesome.min','bootstrap-theme','footer','mio'));
 
+<<<<<<< HEAD
 		echo $this->Html->script(array('jquery-2.2.4','bootstrap','script'));
+=======
+		echo $this->Html->script(array('jquery-2.2.4','bootstrap'));
+>>>>>>> origin/master
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');

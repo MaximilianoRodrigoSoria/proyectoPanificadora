@@ -20,6 +20,7 @@
 	</tr>
 	</thead>
 	<tbody>
+<<<<<<< HEAD
 	<?php foreach ($productos as $producto): ?>
 	<tr>
 		<td><?php echo h($producto['Producto']['id']); ?>&nbsp;</td>
@@ -32,6 +33,20 @@
 	
 			<?php echo $this->Form->postLink(  $this->Html->tag('i', '', array('class' => 'btn btn-default glyphicon glyphicon-trash')). " ",
         array('action' => 'delete', $producto['Producto']['id']), array('escape'=>false),__('Estas seguro que quieres borrar el registro n°%s?', $producto['Producto']['id']),
+=======
+	<?php foreach ($producto as $productos): ?>
+	<tr>
+		<td><?php echo h($productos['Producto']['id_producto']); ?>&nbsp;</td>
+		<td><?php echo h($productos['Producto']['id_formula']); ?>&nbsp;</td>
+		<td><?php echo h($productos['Producto']['nombre']); ?>&nbsp;</td>
+		<td class="actions">
+
+			<?php echo $this->Html->link('',array('controller'=>'productos','action'=>'view', $productos['Producto']['id_producto']), array('class'=>'btn btn-default glyphicon glyphicon-search')); ?>
+			<?php echo $this->Html->link(__(''), array('action' => 'edit', $productos['Producto']['id_producto']), array('class'=>'btn btn-default glyphicon glyphicon-pencil')); ?>
+	
+			<?php echo $this->Form->postLink(  $this->Html->tag('i', '', array('class' => 'btn btn-default glyphicon glyphicon-trash')). " ",
+        array('action' => 'delete', $productos['Producto']['id_producto']), array('escape'=>false),__('Estas seguro que quieres borrar el registro n°%s?', $productos['Producto']['id_producto']),
+>>>>>>> origin/master
    array('class' => 'btn btn-mini')
 ); ?>
 		</td>

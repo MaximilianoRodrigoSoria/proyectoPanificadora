@@ -19,7 +19,11 @@ class Formula extends AppModel {
  *
  * @var string
  */
+<<<<<<< HEAD
 	public $displayField = 'id';
+=======
+	public $displayField = 'id_formula';
+>>>>>>> origin/master
 
 /**
  * Validation rules
@@ -27,7 +31,11 @@ class Formula extends AppModel {
  * @var array
  */
 	public $validate = array(
+<<<<<<< HEAD
 		'id' => array(
+=======
+		'id_formula' => array(
+>>>>>>> origin/master
 			'numeric' => array(
 				'rule' => array('numeric'),
 				//'message' => 'Your custom message here',

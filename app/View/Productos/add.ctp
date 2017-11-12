@@ -2,9 +2,15 @@
 <?php   echo $this->element('navtabs-producto-alta');?>
 <div class="productos form">
 
+<<<<<<< HEAD
 	<form action="add" method="post" class="form-horizontal">
 	<div class="form-group">
 		<?php echo $this->Form->create('producto'); ?>
+=======
+	<form class="form-horizontal">
+	<div class="form-group">
+		<?php echo $this->Form->create('Producto'); ?>
+>>>>>>> origin/master
 
 	<fieldset>
 		<legend><?php echo __('Dar de Alta un Producto'); ?></legend>

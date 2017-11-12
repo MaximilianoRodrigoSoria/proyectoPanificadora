@@ -3,7 +3,11 @@
 	
 	<div class="clientes form">
 	<?php echo $this->Form->create('Cliente'); ?>
+<<<<<<< HEAD
 	<form action="add" method="post" class="form-horizontal">
+=======
+	<form class="form-horizontal">
+>>>>>>> origin/master
 	<fieldset>
 		<legend><?php echo __('Dar de Alta un Cliente'); ?></legend>
 	<?php
