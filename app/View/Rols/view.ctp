@@ -1,5 +1,3 @@
-<div class="container">
-
 <div class="rols view">
 <h2><?php echo __('Rol'); ?></h2>
 	<dl>
@@ -29,7 +27,7 @@
 <div class="related">
 	<h3><?php echo __('Related Usuarios'); ?></h3>
 	<?php if (!empty($rol['Usuario'])): ?>
-	<table class="table">
+	<table cellpadding = "0" cellspacing = "0">
 	<tr>
 		<th><?php echo __('Id'); ?></th>
 		<th><?php echo __('Rol Id'); ?></th>
@@ -41,7 +39,7 @@
 		<th><?php echo __('Legajo'); ?></th>
 		<th><?php echo __('Created'); ?></th>
 		<th><?php echo __('Modified'); ?></th>
-		
+		<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($rol['Usuario'] as $usuario): ?>
 		<tr>
@@ -55,16 +53,15 @@
 			<td><?php echo $usuario['legajo']; ?></td>
 			<td><?php echo $usuario['created']; ?></td>
 			<td><?php echo $usuario['modified']; ?></td>
-			
+			<td class="actions">
+				<?php echo $this->Html->link(__('View'), array('controller' => 'usuarios', 'action' => 'view', $usuario['id'])); ?>
+				<?php echo $this->Html->link(__('Edit'), array('controller' => 'usuarios', 'action' => 'edit', $usuario['id'])); ?>
+				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'usuarios', 'action' => 'delete', $usuario['id']), array(), __('Are you sure you want to delete # %s?', $usuario['id'])); ?>
+			</td>
 		</tr>
 	<?php endforeach; ?>
 	</table>
 <?php endif; ?>
-
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('Nuevo Usuario'), array('controller' => 'usuarios', 'action' => 'add')); ?> </li>
-		</ul>
+	<?php echo $this->Html->link(__('Nuevo Usuario'), array('controller' => 'usuarios', 'action' => 'add'), array('type'=>'button','class'=>'btn btn-default')); ?>
 	</div>
-</div>
 </div>

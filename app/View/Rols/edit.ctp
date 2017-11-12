@@ -2,7 +2,7 @@
 
 <div class="form-group">
 	<?php echo $this->Form->create('Rol'); ?>
-	<?php   echo $this->element('navtabs-editar');?>
+	<?php   echo $this->element('navtabs-rol-editar');?>
 	<fieldset>
 		
 	<?php

@@ -32,7 +32,5 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 
-	
-	public $components = array('DebugKit.Toolbar' => array('panels' => array('log' => false, 'variables' => false), 'history' => 10));
 
 }

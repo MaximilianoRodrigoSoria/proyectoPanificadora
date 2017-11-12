@@ -1,9 +1,9 @@
-<br>
+<div class="header">
 <div class="container">
 
 <div id="header">
        
-			<nav class="navbar navbar-inverse" class="img-responsive">
+			<nav class="navbar navbar-inverse navbar-fixed-top" class="img-responsive">
  			<div class="container-fluid">
     	<div class="navbar-header">
           <a class="navbar-brand" href="#">Panificados del Sur</a>
@@ -17,7 +17,7 @@
 
      	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       			<ul class="nav navbar-nav">
-        			<li class="active"><?php   echo $this->Html->link('Home',array('controller'=>'','action'=>'index'));?></li>
+        			<li><?php   echo $this->Html->link('Home',array('controller'=>'','action'=>'index'));?></li>
         			<li><?php   echo $this->Html->link('Usuarios',array('controller'=>'Usuarios','action'=>'index'));?></li>
                 <li><?php   echo $this->Html->link('Clientes',array('controller'=>'Clientes','action'=>'index'));?></li>
         				<li class="dropdown">
@@ -26,9 +26,9 @@
             			<li><a href="#">Pedidos de Cliente</a></li>
             			<li><a href="#">Pedidos de Producci&oacute;n</a></li>
           			</ul></li>
-        			<li><a href="#">Productos</a></li>
-        			<li><a href="#">Insumos</a></li>
-        			<li><a href="#">F&oacute;rmulas</a></li>
+        			<li><?php   echo $this->Html->link('Productos',array('controller'=>'Productos','action'=>'index'));?></li>
+        			<li><?php   echo $this->Html->link('Insumos',array('controller'=>'Insumos','action'=>'index'));?></li>
+              <li><?php   echo $this->Html->link('Formulas',array('controller'=>'Formulas','action'=>'index'));?></li>
       				</ul>
       			<ul class="nav navbar-nav navbar-right">
         			<li><a href="#" type="button" data-toggle="modal" data-target="#salir">Salir</a></li>
@@ -38,4 +38,5 @@
 		</nav>
 	</div>
 
+</div>
 </div>

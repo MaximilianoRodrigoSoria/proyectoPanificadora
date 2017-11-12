@@ -1,5 +1,6 @@
+<div class="container">
 <div class="clientes view">
-<h2><?php echo __('Cliente'); ?></h2>
+<h2><?php echo __('Detalle de Cliente'); ?></h2>
 	<dl>
 		<dt><?php echo __('Id'); ?></dt>
 		<dd>
@@ -31,24 +32,16 @@
 			<?php echo h($cliente['Cliente']['email']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Created'); ?></dt>
+		<dt><?php echo __('Fecha de Creacion'); ?></dt>
 		<dd>
 			<?php echo h($cliente['Cliente']['created']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Modified'); ?></dt>
+		<dt><?php echo __('Fecha de Modificacion'); ?></dt>
 		<dd>
 			<?php echo h($cliente['Cliente']['modified']); ?>
 			&nbsp;
 		</dd>
 	</dl>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Cliente'), array('action' => 'edit', $cliente['Cliente']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Cliente'), array('action' => 'delete', $cliente['Cliente']['id']), array(), __('Are you sure you want to delete # %s?', $cliente['Cliente']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Clientes'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Cliente'), array('action' => 'add')); ?> </li>
-	</ul>
-</div>
+	<?php echo $this->Html->link(__('Atras'), array('action' => 'index'), array('type'=>'button','class'=>'btn btn-default')); ?>
+</div></div>

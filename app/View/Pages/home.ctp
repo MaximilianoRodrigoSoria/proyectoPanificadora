@@ -6,7 +6,7 @@
 		<?php
 		echo $this->Html->meta('icon');
 		//echo $this->Html->css(array('estilos','bootstrap-theme.min','bootstrap.min','footer', 'cake.generic'));
-		echo $this->Html->css(array('estilos','cake.generic','bootstrap','font-awesome.min','bootstrap-theme','footer'));
+		echo $this->Html->css(array('bootstrap','estilos','mio'));
 		echo $this->Html->script(array('jquery-2.2.4','bootstrap'));
 
 		echo $this->fetch('meta');

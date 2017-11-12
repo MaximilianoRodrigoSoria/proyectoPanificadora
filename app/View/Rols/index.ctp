@@ -1,5 +1,5 @@
 <div class="container">
-	<?php   echo $this->element('navtabs-consulta');?>
+	<?php   echo $this->element('navtabs-rol-consulta');?>
 	<input type="text" class="form-control" placeholder="Buscar"><br>
 	<div class="panel panel-default">
 
