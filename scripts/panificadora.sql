@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-11-2017 a las 23:04:19
+-- Tiempo de generación: 13-11-2017 a las 22:33:17
 -- Versión del servidor: 10.1.25-MariaDB
 -- Versión de PHP: 5.6.31
 
@@ -201,8 +201,11 @@ CREATE TABLE `rol` (
 --
 
 INSERT INTO `rol` (`id`, `nombre`) VALUES
-(13, 'Produccion'),
-(14, 'AdministraciÃ³n');
+(13, 'empleado_produccion'),
+(14, 'administracion'),
+(15, 'encargado_produccion'),
+(16, 'gerente_produccion'),
+(17, 'ventas');
 
 -- --------------------------------------------------------
 
@@ -389,7 +392,7 @@ ALTER TABLE `vista`
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `empleado`
 --
@@ -404,7 +407,7 @@ ALTER TABLE `estado`
 -- AUTO_INCREMENT de la tabla `formula`
 --
 ALTER TABLE `formula`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `insumos`
 --
@@ -424,12 +427,12 @@ ALTER TABLE `permiso`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `rol`
 --
 ALTER TABLE `rol`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT de la tabla `tipo`
 --
@@ -439,7 +442,7 @@ ALTER TABLE `tipo`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT de la tabla `vista`
 --
